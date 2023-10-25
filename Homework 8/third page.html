@@ -1,0 +1,108 @@
+<html>
+
+
+<!-- removed the body tag-->
+<!--<body <meta charset="utf-8">-->
+<!-- added a head tag-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+</head>
+<h1>Contact Me!</h1>
+<nav>
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #6f42c1;">
+
+  </nav>
+</nav>
+
+<body>
+  <span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+font-size: large;"></span>
+  <!-- moved the form tag outside of the span tag-->
+  <!--<form action="nextPage.html" type="Post">-->
+  <!-- commented out the form action because it will try and move to the next page -->
+  First Name: <input type="text" id="fName"><br>
+  Last Name: <input type="text" id="lName"><br>
+  Email Address: <input type="text" id="email"><br>
+  <!-- add another input box -->
+  <button id="mySubmit" onclick='checkboxes();' type="button">Submit
+
+  </button>
+  <!--    </form>-->
+  </span>
+</body>
+<h1>
+  Do you accept terms and agreements?
+</h1>
+<h2>
+  <span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+font-size: large;"></span>
+  <!-- add more radio buttons -->
+  <!-- moved this comment outside of the span tag and closed it off-->
+  <input type="radio" name="color" value="Yes">Yes<br>
+  <input type="radio" name="color" value="No">No<br>
+  </span>
+</h2>
+<h3>
+  <!--<a href="file:///C:/Users/gflem/Desktop/School/UM/classes/Creative%20Coding/hw%206/second%20page.html">Click to find
+      out my favorite book/movie</a>-->
+  <!-- changed this to a relative link instead of an absolute link-->
+  <a href="second%20page.html">Click to find
+    out my favorite book/movie</a>
+
+  <!-- add a new hyperlink -->
+</h3>
+<h4>
+  <!--<a href="file:///C:/Users/gflem/Desktop/School/UM/classes/Creative%20Coding/hw%206/homepage.html">Home Page</a>-->
+  <!-- moved from an absolute link to a relative link-->
+  <a href="homepage.html">Home Page</a>
+
+  <!-- add a new hyperlink -->
+
+</h4>
+
+<head>
+  <title>First Page</title>
+  <script>
+    function checkboxes() {
+      var firstName = document.getElementById("fName").value;
+
+      if (firstName == "") {
+        document.getElementById("fName").style.backgroundColor = "red";
+        document.getElementById("fname").focus();
+
+      }
+
+      // checkboxes can check for both first name and last name
+      var email = document.getElementById("email").value;
+      if (email == "") {
+        document.getElementById("email").style.backgroundColor = "red";
+        document.getElementById("email").focus();
+      }
+
+      var lastName = document.getElementById("lName").value;
+      if (lastName == "") {
+        document.getElementById("lName").style.backgroundColor = "red";
+        document.getElementById("lname").focus();
+      }
+    }
+
+    /*function checkboxes() {
+      var lastName = document.getElementById("lName").value;
+      if (lastName == "") {
+        document.getElementById("lName").style.backgroundColor = "red";
+        document.getElementById("lname").focus();
+      }
+    }*/
+  </script>
+
+</head>
+
+</html>
