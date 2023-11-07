@@ -12,8 +12,10 @@ var bodyY = 160;
 var bodyDirection;
 
 var triangleX = 30;
-var triangleY = 75;
-var triangleDirection;
+var triangleY1 = 75;
+var triangleY2 = 20;
+var triangleY3 = 75;
+var triangleDirection = 3;
 
 var size = 27;
 var count = 0;
@@ -29,7 +31,6 @@ function setup()
                 headDirection = floor(random() * 10);
                 mouthDirection = floor(random() * 10);
                 bodyDirection = floor(random() * 10);
-                triangleDirection = floor(random() * 10);
                 lefteyeDirection = floor(random() * 10);
             }
 
@@ -82,14 +83,23 @@ function setup()
                 
                 point(260, 100);
                
-                triangle(30, 75, 58, 20, 86, 75);
-                triangleY += bodyDirection;
-                if(triangleY <= 0 || triangleY >= 450 )
+                triangle(triangleX, triangleY1, 58, triangleY2, 86, triangleY3);
+                triangleY1 += triangleDirection;
+                if(triangleY1 <= 0 || triangleY1 >= 450 )
                 {
-                triangleDirection *= -1;
+                triangleY1 += triangleDirection;
                 }
+                triangleY2 += triangleDirection;
+                if(triangleY2 <= 0 || triangleY2 >= 450 )
+                
                 {
-                triangleY += triangleDirection;
+                triangleY2 += triangleDirection;
+                }
+                triangleY3 += triangleDirection;
+                if(triangleY3 <= 0 || triangleY3 >= 450 )
+                
+                {
+                triangleY3 += triangleDirection;
                 }
                 
                 circle(mouthX, mouthY, 20);
